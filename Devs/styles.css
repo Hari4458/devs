@@ -1,0 +1,151 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to right, #f4f4f4, #eaeaea);
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.navbar:hover {
+    background: linear-gradient(90deg, #0056b3, #004494);
+}
+
+.navbar .logo h2 {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: inline;
+}
+
+.navbar nav ul li {
+    display: inline;
+    margin-right: 15px;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 0.5s forwards; /* Animation for fade-in */
+}
+
+.navbar nav ul li:nth-child(1) { animation-delay: 0.1s; }
+.navbar nav ul li:nth-child(2) { animation-delay: 0.2s; }
+.navbar nav ul li:nth-child(3) { animation-delay: 0.3s; }
+.navbar nav ul li:nth-child(4) { animation-delay: 0.4s; }
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #ffc107;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* Add a background image */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    animation: slideIn 1s ease forwards; /* Slide-in animation */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: linear-gradient(90deg, #ffc107, #e0a800);
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s; /* Added transform for scaling */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #e0a800, #c69500);
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Card Styles */
+.card {
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.card-inner {
+    width: 300px;
+    height: 200px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Flip animation */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-front {
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+    color: white;
+}
+
+.card-back {
+    background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+    transform: rotateY(180deg);
+}
+
+/* Footer Styles */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width
